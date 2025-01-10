@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Cadastrar Novo Usuário</h1>
+    <h5 class="text-success">Cadastrar Novo Usuário</h5>
 
     <form action="{{ route('usuarios.store') }}" method="POST" class="mt-3">
         @csrf
@@ -20,7 +20,7 @@
             <input type="password" id="senha" name="senha" class="form-control" minlength="6" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Cadastrar</button>
-        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary">Voltar</a>
+        <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
     </form>
 @endsection

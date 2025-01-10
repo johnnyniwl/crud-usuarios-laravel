@@ -2,8 +2,7 @@
 
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>Usuários Cadastrados</h1>
-        <a href="{{ route('usuarios.create') }}" class="btn btn-primary">Cadastrar Novo Usuário</a>
+        <a href="{{ route('usuarios.create') }}" class="btn btn-primary btn-sm">Cadastrar Novo Usuário</a>
     </div>
 
     <div class="table-responsive">
@@ -24,13 +23,13 @@
                         <td>{{ $usuario->nome }}</td>
                         <td>{{ $usuario->email }}</td>
                         <td>
-                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Tem certeza que deseja excluir este usuário?')">
-                                    Excluir
+                                    <i class="fa fa-trash"></i>
                                 </button>
                             </form>
                         </td>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Editar Usuário</h1>
+    <h5 class="text-success">Editar Usuário</h5>
 
     <form action="{{ route('usuarios.update', $usuario->id) }}" method="POST" class="mt-3">
         @csrf
@@ -23,7 +23,9 @@
             </a>
         </div>
 
-        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary">Voltar</a>
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
     </form>
 @endsection

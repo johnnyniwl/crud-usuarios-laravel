@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Alterar Senha</h1>
+    <h5 class="text-success">Alterar Senha</h5>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -28,8 +28,8 @@
             <label for="nova_senha_confirmation" class="form-label">Confirme a Nova Senha</label>
             <input type="password" class="form-control" id="nova_senha_confirmation" name="nova_senha_confirmation" required>
         </div>
-        <button type="submit" class="btn btn-primary">Alterar Senha</button>
-        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary">Voltar</a>
+        <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+        <a href="{{ route('usuarios.index') }}" class="btn btn-secondary btn-sm">Voltar</a>
     </form>
 </div>
 @endsection
