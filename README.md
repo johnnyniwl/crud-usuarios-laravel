@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-### Instale as Dependências do Frontend
+### Inicie o Servidor
 ```bash
 php artisan serve
 ```
