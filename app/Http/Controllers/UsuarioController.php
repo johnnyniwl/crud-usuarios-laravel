@@ -30,14 +30,23 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
+         $customMessages = [
+            'nome.required' => 'O campo nome é obrigatório.',
+            'email.required' => 'O campo email é obrigatório.',
+            'email.email' => 'Por favor, insira um email válido.',
+            'email.unique' => 'Este email já está em uso. Por favor, escolha outro.',
+            'senha.required' => 'O campo senha é obrigatório.',
+            'senha.min' => 'A senha deve ter pelo menos :min caracteres.',
+        ];
+
         $request->validate([
             'nome' => 'required',
             'email' => 'required|email|unique:usuarios',
             'senha' => 'required|min:6',
-        ]);
+        ], $customMessages);
 
         try {
-            
+
             Usuario::create([
                 'nome' => $request->nome,
                 'email' => $request->email,
