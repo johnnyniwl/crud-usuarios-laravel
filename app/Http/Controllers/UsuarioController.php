@@ -36,14 +36,19 @@ class UsuarioController extends Controller
             'senha' => 'required|min:6',
         ]);
 
-        Usuario::create([
-            'nome' => $request->nome,
-            'email' => $request->email,
-            'senha' => Hash::make($request->senha), //bcrypt($request->senha),
-        ]);
+        try {
+            Usuario::create([
+                'nome' => $request->nome,
+                'email' => $request->email,
+                'senha' => Hash::make($request->senha),
+            ]);
 
-        return redirect()->route('usuarios.index')->with('success', 'Usuário cadastrado com sucesso!');
+            return redirect()->route('usuarios.index')->with('success', 'Usuário cadastrado com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('usuarios.index')->with('error', 'Ocorreu um erro ao cadastrar o usuário. Tente novamente!');
+        }
     }
+
 
     /**
      * Display the specified resource.
