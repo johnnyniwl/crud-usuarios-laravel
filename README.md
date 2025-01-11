@@ -23,16 +23,20 @@ cd crud-usuarios-laravel
 composer install
 ```
 
-### Configure o Ambiente
+## Configure o Ambiente
 
 Crie o arquivo .env a partir de .env.example e configure o banco de dados:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nome_do_banco
-DB_USERNAME=seu_usuario
-DB_PASSWORD=sua_senha
+### Configurações do Banco de Dados
+
+Certifique-se de configurar corretamente o arquivo `.env` com as seguintes informações:
+
+- `DB_CONNECTION=mysql`
+- `DB_HOST=127.0.0.1`
+- `DB_PORT=3306`
+- `DB_DATABASE=nome_do_banco`
+- `DB_USERNAME=seu_usuario`
+- `DB_PASSWORD=sua_senha`
 
 
 ### Geração da Key
