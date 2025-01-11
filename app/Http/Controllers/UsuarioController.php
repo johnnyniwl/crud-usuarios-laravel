@@ -45,7 +45,7 @@ class UsuarioController extends Controller
 
             return redirect()->route('usuarios.index')->with('success', 'Usuário cadastrado com sucesso!');
         } catch (\Exception $e) {
-            return redirect()->route('usuarios.index')->with('error', 'Ocorreu um erro ao cadastrar o usuário. Tente novamente!');
+            return redirect()->route('usuarios.index')->with('error', 'Ocorreu um erro ao cadastrar o usuário.');
         }
     }
 
