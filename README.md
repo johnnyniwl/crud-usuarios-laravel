@@ -52,6 +52,9 @@ php artisan migrate
 ### Instale as Dependências do Frontend
 ```bash
 npm install
+```
+
+```bash
 npm run dev
 ```
 
