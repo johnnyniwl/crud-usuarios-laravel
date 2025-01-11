@@ -15,6 +15,9 @@
 ### Clone o Repositório
 ```bash
 git clone https://github.com/johnnyniwl/crud-usuarios-laravel.git
+```
+
+```bash
 cd crud-usuarios-laravel
 ```
 
